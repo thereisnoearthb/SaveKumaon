@@ -1,0 +1,52 @@
+<script>
+
+    function randomSite() {
+
+      const SendMailTo = "dm-nai-ua@nic.dot.in,comm-kum-ua@nic.in,nodofficer-cmo-uk@gov.in"
+      const bcc = "solidarity@thereisnoearthb.com"
+
+        var SubjectLine = [
+              'Illegal destruction of playground, walking path and water tank by a builder in Chatola, P.O. Mukteshwar, Nainital',
+              'Kindly stop Illegal destruction of playground, walking path and water tank by a builder in Chatola',
+              'Request to stop Illegal destruction of playground, walking path and water tank by a builder in Chatola, Nainital',
+              'Please look into Illegal destruction of playground, walking path and water tank by a builder in Chatola, P.O. Mukteshwar, Nainital'
+            ];
+            //MessageToSend = "Could you please give a quick shoutout to 'There Is No Earth B'?<br>instagram.com/thereisnoearthb<br>twitter.com/thereisnoearthb<br>t.me/thereisnoearthb";
+
+      /*var OpeningLine  = [
+          'To%20Whom%20It%20May%20Concern%0A%0A',
+          'To%20Concerned%20Authorities%0A%0A',
+          'To%20Whomsoever%20It%20May%20Concern%0A%0A',
+          'To%20Concerned%20Department%0A%0A',
+
+
+
+        ];*/
+
+        var OpeningLine  = ['DM%20Nainital%2C%20Commissioner%20Kumaon%20and%20Chief%20Minister%20-%20Uttarakhand%0A%0A'
+        ];
+
+        const BodyOfEmail = "1%29%20A%20builder%20has%20illegally%20encroached%20upon%20the%20sole%20public%20playing%20field%20in%20Village%20Chatola.%20The%20field%20was%20developed%20on%20Gram%20Sabha%20Land%20to%20create%20a%20playing%20field%20with%20Government%20Funds%20under%20the%20PYKKA%20scheme%2C%20from%20the%20GOI%2C%20Ministry%20of%20Youth%20Affairs%20and%20Sports.%20%0A%0A2%29%20The%20builder%20has%20also%20demolished%20part%20of%20a%20100-year-old%20village%20path%20reducing%20it%20to%20less%20than%20half%20its%20width%20and%20making%20it%20dangerous%20and%20vulnerable%20to%20collapse.%20%0AThe%20path%20was%20being%20used%20by%20schoolchildren%2C%20residents%2C%20local%20villagers%2C%20cattle%2C%20and%20horses%20that%20carried%20loads%20and%20was%20the%20only%20approach%20to%20some%20homes.%20This%20path%20connects%20several%20villages%2C%20starting%20from%20Seetla%2C%20passing%20through%20Chatola%2C%20and%20proceeds%20onwards%20to%20Satkhol%2C%20Satoli%2C%20Sonapani%2C%20and%20Naulikhan.%0A3%29%20The%20supervisor%20of%20the%20builders%20JCB%20operations%2C%20a%20local%20resident%20living%20adjacent%20to%20the%20village%20path%2C%20has%20diverted%20the%20village%20path%20and%20encroached%20upon%20Govt%20land.%0A%0A4%29%20They%20have%20also%20illegally%20demolished%20a%2070-year-old%20village%20water%20tank.%20%0A%20%0AThe%20youth%20who%20used%20this%20field%20to%20prepare%20for%20competitive%20cricket%20at%20the%20block%2C%20district%2C%20and%20state%20level%2C%20now%20have%20nowhere%20to%20practice.%0AIn%20a%20zone%20where%20there%20is%20acute%20water%20shortage%20and%20perennial%20naulas%20are%20drying%20up%2C%20a%2070-year-old%20traditional%20water%20tank%20has%20been%20illegally%20destroyed.%0AThe%20JCB%20supervisor%20has%20grabbed%20village%2F%20Government%2F%20forest%20land%20and%20the%20Gram%20Pradhan%20and%20offices%20of%20the%20District%20Magistrate%2C%20District%20Forest%20Officer%20have%20remained%20silent%20on%20a%20petition%20received%20by%20them%20on%2021st%20June%202021%20despite%20written%20complaints%2C%20protests%2C%20and%20media%20reports.%0A%20%0AIt%20is%20requested%20that%20action%20is%20initiated%20against%20the%20culprits%2C%20and%2C%20they%20be%20directed%20to%20restore%20the%20paidal%20marg%2C%20water%20tank%2C%20and%20playing%20field%20to%20their%20original%20dimensions%20at%20the%20exact%20same%20locations%20on%20which%20they%20were.%0A%0AAn%20inquiry%20needs%20to%20be%20conducted%20as%20to%20how%20Government%20land%20can%20be%20encroached%20upon%20like%20this%20and%20there%20is%20no%20resulting%20action%20from%20the%20concerned%20authorities.%0A";
+         //BodyOfEmail2 = "There Is No Earth B";
+
+        var EndingLine  = [
+            '%0A%0AIn%20Solidarity%0AAn%20environmentally%20conscious%20and%20concerned%20Indian%0A',
+            '%0A%0AIn%20Solidarity%0AA%20Concerned%20Citizen%0A',
+            '%0A%0AA%20Concerned%20Indian%0A',
+            '%0A%0ASincerely%0AA%20Concerned%20Citizen%0A%0A'
+          ];
+
+      var sub = parseInt(Math.random() * SubjectLine.length);
+      var Oline = parseInt(Math.random() * OpeningLine.length);
+      var Eline = parseInt(Math.random() * EndingLine.length);
+
+      //const CompleteMessageToSend = "mailto:"+ SendMailTo + "?bcc="+ bcc + "&subject=" + SubjectLine[sub] + "&body=" + OpeningLine[Oline] + BodyOfEmail +(encodeURIComponent(BodyOfEmail2)) + EndingLine[Eline];
+
+      const CompleteMessageToSend = "mailto:"+ SendMailTo + "?bcc="+ bcc + "&subject=" + SubjectLine[sub] + "&body=" + OpeningLine[Oline] + BodyOfEmail + EndingLine[Eline];
+
+      location.href = CompleteMessageToSend;
+
+
+    }
+</script>
+<body onload='randomSite()'>
